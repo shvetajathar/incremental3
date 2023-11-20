@@ -9,7 +9,7 @@ using dotnetapp.Models;
 namespace dotnetapp.Controllers
 {
     [ApiController]
-    [Route("/[contoller]")]
+    [Route("[contoller]")]
 
     
 
@@ -38,10 +38,10 @@ namespace dotnetapp.Controllers
         [Route("EditPlayer/{id}")]
         public IActionResult PutPlayer(int id, Player p)
         {
-            if(ModelState.IsValid){
             Player P=context.Players.Find(id);
-            P.Id=p.Id;
-            P.Name=p.Name;
+            if(ModelState.IsValid){
+            P.Id=1;
+            P.Name=;
             P.Age=P.Age;
             P.BiddingPrice=P.BiddingPrice;
             P.Category=P.Category;
@@ -49,6 +49,8 @@ namespace dotnetapp.Controllers
             }
             return Ok();
         }
+        [HttpDelete]
+        [Route("DeletePlayer/{id}")]
         public IActionResult DeletePlayer(int id)
         {
             var data=context.Players.Find(id);
