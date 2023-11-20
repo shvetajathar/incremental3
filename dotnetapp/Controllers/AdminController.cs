@@ -39,7 +39,8 @@ namespace dotnetapp.Controllers
         {
             context.Players.Add(p);
             context.SaveChanges();
-            return Created("Players Added Successfully");
+            // return Created("Players Added Successfully",p);
+            return Ok();
         }
         public IActionResult CreateTeams()
         {
@@ -51,7 +52,8 @@ namespace dotnetapp.Controllers
         {
             context.Teams.Add(t);
             context.SaveChanges();
-            return Created("Teams added Successfully");
+            // return Created("Teams added Successfully",p);
+            return Ok();
         }
         
         [HttpGet]
@@ -83,9 +85,15 @@ namespace dotnetapp.Controllers
         [Route("DeletePlayer/{id}")]
         public IActionResult DeletePlayer(int id)
         {
+            try{
+
             var data=context.Players.Find(id);
             context.Players.Remove(data);
             return Ok();
+            }
+            catch(Exception ex){
+                return BadRequest(ex.Message);
+            }
         }
 
 
