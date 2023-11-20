@@ -64,11 +64,12 @@ namespace dotnetapp.Controllers
         {
             Player player=context.Players.Find(id);
             
-                player.Id=p.Id;
+                // player.Id=p.Id;
                 player.Name=p.Name;
                 player.Age=p.Age;
                 player.BiddingPrice=p.BiddingPrice;
                 player.Category=p.Category;
+                context.SaveChanges();
                 
                 
             
@@ -82,6 +83,7 @@ namespace dotnetapp.Controllers
 
             var data=context.Players.Find(id);
             context.Players.Remove(data);
+            context.SaveChanges();
             return Ok();
             }
             catch(Exception ex){
