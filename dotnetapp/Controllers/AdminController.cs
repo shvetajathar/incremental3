@@ -9,7 +9,7 @@ using dotnetapp.Models;
 namespace dotnetapp.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("/[controller]")]
 
     public class AdminController : ControllerBase
     {
@@ -20,12 +20,19 @@ namespace dotnetapp.Controllers
             context = _context;
         }
 
+        [HttpGet]
+        [Route("showplayers")]
+
         public IActionResult GetPlayers()
         {
             var data=context.Players.ToList();
             return Ok(data);
 
         }
+        
+        [HttpGet]
+        [Route("ShowTeams")]
+
         public IActionResult GetTeams()
         {
             var data=context.Teams.ToList();
@@ -36,16 +43,15 @@ namespace dotnetapp.Controllers
         [Route("EditPlayer/{id}")]
         public IActionResult PutPlayer(int id, Player p)
         {
-            var data=context.Players.Find(id);
+            Player player=context.Players.Find(id);
             if(ModelState.IsValid){
-                Player P=new Player{
-            Id=1,
-            Name="John Doe",
-            Age=24,
-            BiddingPrice=25,
-            Category="asd"
-                };
-            context.SaveChanges();
+                player.Id=p.Id;
+                player.Name=p.Name;
+                player.Age=p.Age;
+                player.BiddingPrice=p.BiddingPrice;
+                player.Category=p.Category;
+                
+                
             }
             return Ok();
         }
