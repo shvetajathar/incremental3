@@ -8,22 +8,50 @@ using dotnetapp.Models;
 
 namespace dotnetapp.Controllers
 {
+    [ApiController]
+    [Route("/[contoller]")]
 
     
 
     public class AdminController : ControllerBase
     {
-        private readonly ApplicationDbContext _context;
+        private readonly ApplicationDbContext context;
 
-        public AdminController(ApplicationDbContext context)
+        public AdminController(ApplicationDbContext _context)
         {
-            _context = context;
+            context = _context;
         }
 
         public IActionResult GetPlayers()
         {
+            var data=context.Players.ToList();
+            return Ok(data);
+
+        }
+        public IActionResult GetTeams()
+        {
+            var data=context.Teams.ToList();
+            return Ok(data);
             
         }
+        // [HttpPut]
+        public IActionResult PutPlayer(int id, Player p)
+        {
+            Player P=context.Players.Find(id);
+            P.Id=p.Id;
+            P.Name=p.Name;
+            P.Age=P.Age;
+            P.BiddingPrice=P.BiddingPrice;
+            P.Category=P.Category;
+            context.SaveChanges();
+            return RedirectToAction("GetPlayers");
+        }
+        public IActionResult DeletePlayer()
+        {
+            return Ok();
+        }
+
+
 
         
     }

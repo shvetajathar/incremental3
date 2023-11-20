@@ -20,7 +20,7 @@ namespace dotnetapp.Models
             public int Age {get;set;}
             public string Category {get;set;}
             [Range(0.1,int.MaxValue, ErrorMessage = "Bidding amount must be greater than 0.")]
-            public decimal BiddingAmount {get;set;}  
+            public decimal BiddingPrice {get;set;}  
             public Team ?Team {get; set;}
         }
 }
