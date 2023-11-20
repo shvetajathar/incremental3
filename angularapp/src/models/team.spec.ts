@@ -1,4 +1,4 @@
-import { Team } from './team.models';
+import { Team } from './team.model';
 
 describe('Team', () => {
   it('should create an instance', () => {

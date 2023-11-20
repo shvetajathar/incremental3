@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Player } from '../../models/player.models';
+import { Player } from '../../models/player.model';
 import { AdminService } from '../services/admin.service';
 // import { ActivatedRoute, Router } from '@angular/router';
 
@@ -9,9 +9,9 @@ import { AdminService } from '../services/admin.service';
   styleUrls: ['./player.component.css']
 })
 export class PlayerComponent implements OnInit {
-  
+
  players:Player[] 
- newPlayer=Player
+ newPlayer:Player
   constructor(private ad:AdminService) {
     //  this.ad.getPlayers().subscribe(data=>{this.newPlayer.push(...data)});
    }

@@ -19,4 +19,8 @@ export class AdminService {
   {
     return this.httpclient.get<any[]>(this.url + '/ShowTeams');
   }
+  createTeam():Observable<Team[]>
+  {
+    return this.httpclient.post<Team[]>(this.url + '/AddTeams');
+  }
 }
