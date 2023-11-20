@@ -5,8 +5,8 @@ import { Team } from 'src/models/team.model';
   providedIn: 'root'
 })
 export class TeamService {
-  creaTeam:Team
   
+
 
   constructor() { }
 }

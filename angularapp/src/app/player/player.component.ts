@@ -13,7 +13,7 @@ export class PlayerComponent implements OnInit {
  players:Player[] 
  newPlayer:Player
   constructor(private ad:AdminService) {
-    //  this.ad.getPlayers().subscribe(data=>{this.newPlayer.push(...data)});
+     this.ad.getPlayers().subscribe(data=>{this.players.push(...data)});
    }
 
   ngOnInit(): void {
