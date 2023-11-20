@@ -9,9 +9,7 @@ using dotnetapp.Models;
 namespace dotnetapp.Controllers
 {
     [ApiController]
-    [Route("[contoller]")]
-
-    
+    [Route("[controller]")]
 
     public class AdminController : ControllerBase
     {
