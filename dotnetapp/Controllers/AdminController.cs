@@ -34,9 +34,11 @@ namespace dotnetapp.Controllers
             return Ok(data);
             
         }
-        // [HttpPut]
+        [HttpPut]
+        [Route("EditPlayer/{id}")]
         public IActionResult PutPlayer(int id, Player p)
         {
+            if(ModelState.IsValid){
             Player P=context.Players.Find(id);
             P.Id=p.Id;
             P.Name=p.Name;
@@ -44,10 +46,13 @@ namespace dotnetapp.Controllers
             P.BiddingPrice=P.BiddingPrice;
             P.Category=P.Category;
             context.SaveChanges();
-            return RedirectToAction("GetPlayers");
+            }
+            return Ok();
         }
-        public IActionResult DeletePlayer()
+        public IActionResult DeletePlayer(int id)
         {
+            var data=context.Players.Find(id);
+            context.Players.Remove(data);
             return Ok();
         }
 
