@@ -29,32 +29,24 @@ namespace dotnetapp.Controllers
             return Ok(data);
 
         }
-        public IActionResult CreatePlayer()
-        {
-            return Ok();
-        }
+        
         [HttpPost]
         [Route("AddPlayers")]
-        public IActionResult CreatePlayer(Player p)
+        public IActionResult Post(Player p)
         {
             context.Players.Add(p);
             context.SaveChanges();
             // return Created("Players Added Successfully",p);
-            return Ok();
-        }
-        public IActionResult CreateTeams()
-        {
-            return Ok();
+            return Created("Added successfully",p);
         }
         [HttpPost]
         [Route("AddTeams")]
-        public IActionResult CreateTeams(Team t)
+        public IActionResult PostTeams(Team t)
         {
             context.Teams.Add(t);
-            context.SaveChanges();
-            // return Created("Teams added Successfully",p);
-            return Ok();
+            return Created("Team Addedd",t);
         }
+        
         
         [HttpGet]
         [Route("ShowTeams")]
