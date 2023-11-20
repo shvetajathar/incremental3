@@ -1,8 +1,9 @@
 export class Player {
+   // players:Player[];
     id:number;
-    teamid:number;
+   // teamid:number;
     name:string;
     age:number;
     category:string;
-    biddingprice:number;
+    biddingPrice:number;
 }

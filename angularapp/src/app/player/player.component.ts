@@ -9,9 +9,11 @@ import { AdminService } from '../services/admin.service';
   styleUrls: ['./player.component.css']
 })
 export class PlayerComponent implements OnInit {
-playerdata:any[]=[]
+  
+ players:Player[] 
+ newPlayer=Player
   constructor(private ad:AdminService) {
-     this.ad.getPlayers().subscribe(data=>{this.playerdata.push(...data)});
+    //  this.ad.getPlayers().subscribe(data=>{this.newPlayer.push(...data)});
    }
 
   ngOnInit(): void {
