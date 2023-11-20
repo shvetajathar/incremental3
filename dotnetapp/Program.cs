@@ -7,7 +7,18 @@ using Microsoft.AspNetCore.Cors;
 var builder = WebApplication.CreateBuilder(args);
 var connectionString=builder.Configuration.GetConnectionString("mycon");
 builder.Services.AddDbContext<ApplicationDbContext>(options=>options.UseSqlServer(connectionString));
+builder.Services.AddCors(
+    
+    options=>{
+        options.AddDefaultPolicy(
+        
+        builder=>{
+            builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
+        
 
+    });
+   
+});
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -25,6 +36,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseCors();
+app.UseRouting();
 
 app.UseAuthorization();
 
