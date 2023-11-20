@@ -1,15 +1,14 @@
-﻿namespace dotnetapp.Models
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore;
+ 
+namespace dotnetapp.Models
 {
-    public class Team
-    {
-         
-        public int TeamId{get;set;}
-        public string TeamName{get;set;}
-
-       public ICollection<Player> Players{get;set;}
-        
-        // Write your Team class here...        
-    }
-    
-
+        public class Team
+        {
+            [Key]
+            public int TeamId {get; set;}
+            public string TeamName {get; set;}
+            public ICollection<Player> ?Player {get; set;}
+        }
 }

@@ -20,6 +20,11 @@ namespace dotnetapp.Controllers
             _context = context;
         }
 
+        public IActionResult GetPlayers()
+        {
+            
+        }
+
         
     }
 }
