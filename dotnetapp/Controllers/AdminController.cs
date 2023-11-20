@@ -38,13 +38,15 @@ namespace dotnetapp.Controllers
         [Route("EditPlayer/{id}")]
         public IActionResult PutPlayer(int id, Player p)
         {
-            Player P=context.Players.Find(id);
+            var data=context.Players.Find(id);
             if(ModelState.IsValid){
-            P.Id=1;
-            P.Name=;
-            P.Age=P.Age;
-            P.BiddingPrice=P.BiddingPrice;
-            P.Category=P.Category;
+                Player P=new Player{
+            Id=1,
+            Name="John Doe",
+            Age=24,
+            BiddingPrice=25,
+            Category="asd"
+                };
             context.SaveChanges();
             }
             return Ok();
