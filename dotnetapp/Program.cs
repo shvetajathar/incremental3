@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Cors;
 
 
 var builder = WebApplication.CreateBuilder(args);
+var connectionString=builder.Configuration.GetConnectionString("mycon");
+builder.Services.AddDbContext<ApplicationDbContext>(options=>options.UseSqlServer(connectionString));
 
 // Add services to the container.
 

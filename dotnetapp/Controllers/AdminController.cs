@@ -44,6 +44,7 @@ namespace dotnetapp.Controllers
         public IActionResult PostTeams(Team t)
         {
             context.Teams.Add(t);
+            context.SaveChanges();
             return Created("Team Addedd",t);
         }
         
@@ -62,7 +63,7 @@ namespace dotnetapp.Controllers
         public IActionResult PutPlayer(int id, Player p)
         {
             Player player=context.Players.Find(id);
-            if(ModelState.IsValid){
+            
                 player.Id=p.Id;
                 player.Name=p.Name;
                 player.Age=p.Age;
@@ -70,7 +71,7 @@ namespace dotnetapp.Controllers
                 player.Category=p.Category;
                 
                 
-            }
+            
             return Ok();
         }
         [HttpDelete]
