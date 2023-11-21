@@ -11,6 +11,7 @@
             <td>Age</td>
             <td>Category</td>
             <td>Bidding Price</td>
+            <td>Edit</td>
         </tr>
     </thead>
     <tbody>
@@ -21,8 +22,7 @@
             <td>{{d.age}}</td>
             <td>{{d.category}}</td>
             <td>{{d.biddingPrice}}</td>
-        </tr>
-        <tr>
+        
             <a [routerLink]="['/EditPlayer/',d.id]">Edit</a>
         </tr>
 

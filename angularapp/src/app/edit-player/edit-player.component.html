@@ -1,1 +1,18 @@
-
+<form  (ngSubmit)="saveData(playerdata)">
+    <div>
+        <label for="id">ID</label>
+        <input type="text" id="id" name="id"  [(ngModel)]="playerdata.id">
+    </div>
+    <div>
+        <label for="teamId">TeamId</label>
+        <input type="text" id="teamId" name="teamId"  [(ngModel)]="playerdata.teamId">
+    </div>
+    <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name"  [(ngModel)]="playerdata.name">
+    </div>
+    <div>
+        <label for="age">Age</label>
+        <input type="text" id="id" name="id"  [(ngModel)]="playerdata.id">
+    </div>
+</form>
