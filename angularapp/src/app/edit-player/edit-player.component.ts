@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./edit-player.component.css']
 })
 export class EditPlayerComponent implements OnInit {
+  playerdata:Player={id:0,}
 
   constructor() { }
 
