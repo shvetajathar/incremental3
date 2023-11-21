@@ -13,6 +13,16 @@
     </div>
     <div>
         <label for="age">Age</label>
-        <input type="text" id="id" name="id"  [(ngModel)]="playerdata.id">
+        <input type="text" id="age" name="age"  [(ngModel)]="playerdata.age">
     </div>
+    <div>
+        <label for="category">Category</label>
+        <input type="text" id="category" name="category"  [(ngModel)]="playerdata.category">
+    </div>
+    <div>
+        <label for="biddingPrice">Biddingprice</label>
+        <input type="text" id="biddingPrice" name="biddingPrice"  [(ngModel)]="playerdata.biddingPrice">
+    </div>
+    <br>
+    <input type="submit" value="save" class="btn btn-Info">
 </form>
