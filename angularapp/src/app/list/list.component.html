@@ -22,6 +22,9 @@
             <td>{{d.category}}</td>
             <td>{{d.biddingPrice}}</td>
         </tr>
+        <tr>
+            <a [routerLink]="['/EditPlayer/',d.id]">Edit</a>
+        </tr>
 
     </tbody>
 </table> 

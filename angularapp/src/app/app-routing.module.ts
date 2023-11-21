@@ -11,8 +11,8 @@ const routes: Routes = [
   {path:'showPlayers',component:ListComponent},
   {path:'ShowTeams',component:ListTeamComponent},
   {path:'AddPlayers',component:AddPlayerComponent},
-  {path:'AddTeams',component:AddTeamComponent},
-  {path:'editPlayer/:id',component:EditPlayerComponent}
+  {path:'AddTeams',component:AddTeamComponent}
+  // {path:'EditPlayer/:id',component:EditPlayerComponent}
 ];
 
 @NgModule({
