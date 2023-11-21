@@ -1,0 +1,28 @@
+<h2>Players List</h2>
+
+
+<table class="table">
+    
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>TeamId</td>
+            <td>Name</td>
+            <td>Age</td>
+            <td>Category</td>
+            <td>Bidding Price</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let d of playerdata">
+            <td>{{d.id}}</td>
+            <td>{{d.teamId}}</td>
+            <td>{{d.name}}</td>
+            <td>{{d.age}}</td>
+            <td>{{d.category}}</td>
+            <td>{{d.biddingPrice}}</td>
+        </tr>
+
+    </tbody>
+</table> 
+

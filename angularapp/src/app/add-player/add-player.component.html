@@ -1,0 +1,27 @@
+<h2>Adding Players</h2>
+
+<form  (ngSubmit)="saveData(playerdata)">
+   
+    <div>
+        <label for="teamId">TeamID</label>
+        <input type="text" id="teamId" name="teamId" [(ngModel)]="playerdata.teamid">
+    </div>
+    <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" [(ngModel)]="playerdata.name">
+    </div>
+    <div>
+        <label for="age">Age</label>
+        <input type="text" id="age" name="age" [(ngModel)]="playerdata.age">
+    </div>
+    <div>
+        <label for="category">category</label>
+        <input type="text" id="category" name="category" [(ngModel)]="playerdata.category">
+    </div>
+    <div>
+        <label for="biddingPrice">biddingPrice</label>
+        <input type="text" id="biddingPrice" name="biddingPrice" [(ngModel)]="playerdata.biddingPrice">
+    </div>
+    <br>
+    <input type="submit" value="save" class="btn btn-info"  >
+</form>

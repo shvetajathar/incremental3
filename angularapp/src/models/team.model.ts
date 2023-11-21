@@ -1,5 +1,5 @@
 export class Team {
-    id:number;
-    name:string;
-    maximumBudget:number;
+    teamid:number;
+    teamname:string;
+    // maximumBudget:number;
 }

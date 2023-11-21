@@ -1,0 +1,17 @@
+<h2>Add Team</h2>
+<form (ngSubmit)="saveData(teamdata)">
+    <div>
+        <label for="teamid">TeamId</label>
+        <input type="text" id="teamid" name="teamid" [(ngModel)]="teamdata.teamid">
+
+     </div>
+     <div>
+        <label for="teamname">TeamName</label>
+        <input type="text" id="teamname" name="teamname" [(ngModel)]="teamdata.teamname">
+
+     </div>
+     <br>
+     <input type="submit" value="save" class="btn btn-info">
+     
+
+</form>

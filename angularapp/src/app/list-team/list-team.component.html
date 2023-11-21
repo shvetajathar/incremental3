@@ -1,0 +1,15 @@
+<h2>Teams List</h2>
+<table>
+    <thead>
+        <tr>
+            <td>TeamID</td>
+            <td>TeamName</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let t of teamdata">
+            <td>{{t.teamId}}</td>
+            <td>{{t.teamName}}</td>
+        </tr>
+    </tbody>
+</table>
