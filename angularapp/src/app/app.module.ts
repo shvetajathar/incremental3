@@ -10,6 +10,8 @@ import { AddPlayerComponent } from './add-player/add-player.component';
 import { AddTeamComponent } from './add-team/add-team.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
+import { EditPlayerComponent } from './edit-player/edit-player.component';
+import { EditTeamComponent } from './edit-team/edit-team.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +20,9 @@ import { FormsModule } from '@angular/forms';
     ListTeamComponent,
     AddPlayerComponent,
     AddTeamComponent,
-    HomeComponent
+    HomeComponent,
+    EditPlayerComponent,
+    EditTeamComponent
   ],
   imports: [
     BrowserModule,
