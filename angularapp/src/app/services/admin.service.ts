@@ -32,7 +32,7 @@ export class AdminService {
   {
     return this.httpclient.post<Team>(this.url + '/AddTeams',teamdata,this.httpOptions);
   }
-  getPlayerById(id:number):Observable<Player>
+  getPlayer(id:number):Observable<Player>
   {
     return this.httpclient.get<Player>(this.url + '/showPlayers/' + id );
   }
