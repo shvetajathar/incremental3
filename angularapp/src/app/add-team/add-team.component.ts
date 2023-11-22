@@ -1,30 +1,33 @@
 import { Component, OnInit } from '@angular/core';
-import { AdminService } from '../services/admin.service';
+import { ITeam } from '../model/iteam';
+import { TeamServiceService } from '../services/team-service.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Team } from 'src/models/team.model';
+
 @Component({
   selector: 'app-add-team',
   templateUrl: './add-team.component.html',
   styleUrls: ['./add-team.component.css']
 })
 export class AddTeamComponent implements OnInit {
-  teamdata={teamid:0,teamname:''};
 
-  constructor(private ad:AdminService,private route:Router,private ac:ActivatedRoute) { }
-  saveData(team:Team):void{
-    this.teamdata=team;
-    this.ad.createTeam(this.teamdata).subscribe(
-      ()=>{
-        alert('Team added');
-        this.route.navigate(['/ShowTeams']);
+  teamdetail : ITeam = {teamId : 0, teamName : '', maxixmunBudget : 0}
+  showdata : any[] = []
 
-      }
+  constructor(private ms : TeamServiceService, private router : Router, private ar : ActivatedRoute) { }
+
+  saveData(team : ITeam) : void {
+    this.teamdetail = team
+    this.ms.AddTeam(this.teamdetail).subscribe(() => {
+      alert("Detail Added")
+      this.router.navigate(['/listteams'])
+    }
     )
-
-
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
+
+    this.ms.getTeams().subscribe(data => {this.showdata.push(...data)})
+
   }
 
 }

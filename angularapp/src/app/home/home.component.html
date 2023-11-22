@@ -1,20 +1,23 @@
-<h2>Welcome to Home</h2>
-<div>
-<ul>
+<!-- <p>home works!</p>
 
-        <li><a routerLink="showPlayers" >Show Players</a></li>
-        <li><a routerLink="ShowTeams">Show Teams</a></li>
-        <li><a routerLink="AddPlayers">Add Players</a></li>
-        <li><a routerLink="AddTeams">Add Teams</a></li>
-       <!-- <li> <a routerLink="showPlayers" >Show Players</a></li> -->
-       <!-- <li> <a routerLink="EditPlayer" >Edit Players</a></li> -->
+<a routerLink="/listteams">List Teams</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a routerLink="/addplayer">Add Player</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a routerLink="/addteam">Add Team</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a routerLink="/listplayer">List Player</a> -->
 
- 
-    
-</ul>
-<!-- <a routerLink="showPlayers" >Show Players</a>
-<a routerLink="ShowTeams">Show Teams</a>
-<a routerLink="AddPlayers">Add Players</a>
-<a routerLink="AddTeams">Add Teams</a> -->
-</div>
-
+<nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" routerLink="/listteams">List Item</a>
+          <a class="nav-link" routerLink="/addplayer">Add Player</a>
+          <a class="nav-link" routerLink="/addteam">Add Team</a>
+          <a class="nav-link" routerLink="/listplayer">List Player</a>
+        </div>
+      </div>
+    </div>
+  </nav>

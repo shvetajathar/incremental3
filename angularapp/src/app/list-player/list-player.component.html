@@ -1,0 +1,19 @@
+
+<!-- <h1>Listing Teams</h1> -->
+<div class="container">
+<h1>List Players</h1>
+<table class="table table-striped">
+    <thead>
+        <th>Player ID</th>
+        <th>Player Name</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let m of playerdata">
+            <td>{{m.id}}</td>
+            <td>{{m.name}}</td>
+            <td><a [routerLink]="['/editplayer/',m.id]">Edit</a></td>
+            <td><a [routerLink]="['/deleteplayer/',m.id]">Delete</a></td>
+        </tr>
+    </tbody>
+</table>
+</div>

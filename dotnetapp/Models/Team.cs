@@ -11,4 +11,4 @@ namespace dotnetapp.Models
             public string TeamName {get; set;}
             public ICollection<Player> ?Player {get; set;}
         }
-}
+} 

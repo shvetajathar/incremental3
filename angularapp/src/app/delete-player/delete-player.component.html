@@ -1,0 +1,60 @@
+<div class="container player-form">
+
+    <h1>Delete Player</h1>
+
+    <form (ngSubmit)="saveData(playerdetail)" #detailForm="ngForm">
+        <!-- <div>
+            <label for="name"></label>
+            <input type="text" name="name" id="name" placeholder="name" [(ngModel)]="playerdetail.name">
+        </div> -->
+    
+        <div class="mb-3">
+            <label for="name" class="form-label">Player Name</label>
+            <input type="text" name="name" class="form-control" id="name" [(ngModel)]="playerdetail.name" disabled>
+        </div>
+
+        
+        <br>
+        
+        <br>
+    
+        <!-- <div>
+            <label for="age"></label>
+            <input type="text" name="age" id="age" placeholder="age" [(ngModel)]="playerdetail.age">
+        </div> -->
+    
+        <div class="mb-3">
+            <label for="age" class="form-label">Player Age</label>
+            <input type="text" name="age" class="form-control" id="age" [(ngModel)]="playerdetail.age" disabled>
+        </div>
+
+        <br>
+        
+    
+        <div class="mb-3">
+            <label for="category" class="form-label">Player Category</label>
+            <input type="text" name="category" class="form-control" id="category" [(ngModel)]="playerdetail.category" disabled>
+        </div>
+
+        <br>
+        
+
+        <br>
+        
+    
+        <!-- <div>
+            <label for="category"></label>
+            <input type="text" name="category" id="category" placeholder="category" [(ngModel)]="playerdetail.category">
+        </div> -->
+    
+        <!-- <div>
+            <label for="biddingprice"></label>
+            <input type="text" name="biddingprice" id="biddingprice" placeholder="biddingprice" [(ngModel)]="playerdetail.biddingprice">
+        </div> -->
+    
+    
+  
+        <button type="submit" class="btn btn-outline-secondary">Delete Player</button>
+
+    </form>
+</div>

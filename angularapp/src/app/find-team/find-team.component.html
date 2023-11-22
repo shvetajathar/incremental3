@@ -1,0 +1,19 @@
+<!-- <p>find-team works!</p>
+<div>
+    <h3>ID : {{teamdata.teamId}}</h3>
+    <h3>Name : {{teamdata.teamName}}</h3>
+    <p *ngFor="let m of playerdata">Name : {{m.name}}</p>
+    <p *ngFor="let m of playerdata">Bidding Price : {{m.biddingPrice}}</p>
+</div> -->
+<div class="container">
+    <div class="card" style="width: 50rem;">
+        <div class="card-header">
+            ID : {{teamdata.teamId}}
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Name : {{teamdata.teamName}}</li>
+          <li class="list-group-item" *ngFor="let m of playerdata">Player Name : {{m.name}}</li>
+          <li class="list-group-item" *ngFor="let m of playerdata">Bidding Price : {{m.biddingPrice}}</li>
+        </ul>
+      </div>
+</div>

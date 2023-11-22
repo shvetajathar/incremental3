@@ -4,17 +4,17 @@ using System.ComponentModel.DataAnnotations.Schema;
  
 namespace dotnetapp.Models
 {
-       
+        
         public class Player
         {
-           
+            
             [Key]
             public int Id {get;set;}
- 
+
             [ForeignKey("Team")]
             public int TeamId {get; set;}
- 
- 
+
+
             [Required(ErrorMessage = "Name is required.")]
             public string Name {get;set;}
             public int Age {get;set;}

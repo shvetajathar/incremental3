@@ -1,0 +1,22 @@
+<!-- <p>list-teams works!</p> -->
+
+<div class="container color-container">
+    
+<h1>Listing Teams</h1>
+
+<table class="table table-striped">
+    <thead>
+        <th>Team ID</th>
+        <th>Team Name</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let m of teamdata">
+            <td>{{m.teamId}}</td>
+            <td>{{m.teamName}}</td>
+            <td><a [routerLink]="['/listteam/',m.teamId]">Details</a></td>
+            <td><a [routerLink]="['/editteam/',m.teamId]">Edit</a></td>
+            <td><a [routerLink]="['/deleteteam/',m.teamId]">Delete</a></td>
+        </tr>
+    </tbody>
+</table>
+</div>

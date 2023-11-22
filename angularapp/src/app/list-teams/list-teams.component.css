@@ -1,0 +1,28 @@
+* {
+    font-family: sans-serif;
+}
+
+h1 {
+    letter-spacing: 0.5rem;
+    text-align: center; margin-bottom: 50px; 
+    margin-top: 100px;
+    
+}
+
+th {
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: rgb(32, 128, 255);
+    transition: 400ms;
+}
+
+.color-container {
+    background-color: rgb(230, 230, 230);
+}
