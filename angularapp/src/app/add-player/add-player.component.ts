@@ -18,7 +18,7 @@ export class AddPlayerComponent implements OnInit {
     this.playerdetail = player
     this.ms.AddPlayer(this.playerdetail).subscribe(() => {
       alert("Detail Added")
-      this.router.navigate(['/listteams'])
+      this.router.navigate(['/listplayer'])
     }
     )
   }
